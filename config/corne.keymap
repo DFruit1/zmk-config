@@ -40,6 +40,7 @@
         CapsWord {
             bindings = <&caps_word>;
             key-positions = <37 40>;
+            layers = <0 1 2>;
         };
     };
 
