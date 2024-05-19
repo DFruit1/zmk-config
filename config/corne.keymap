@@ -19,7 +19,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <30>;
             retro-tap;
-            quick-tap-ms = <100>;
+            hold-while-undecided;
         };
 
         symbollay: symbollay {
@@ -31,7 +31,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <30>;
             retro-tap;
-            quick-tap-ms = <100>;
+            hold-while-undecided;
         };
 
         DisconnectBT: DisconnectBT {
@@ -95,10 +95,9 @@
 
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <180>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <150>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
+            require-prior-idle-ms = <300>;
         };
 
         hrmods_on_right: hrmods_on_right {
@@ -108,10 +107,20 @@
 
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <180>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <150>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
+        };
+
+        spaceshift: spaceshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACESHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <30>;
+            retro-tap;
+            hold-while-undecided;
         };
     };
 
@@ -153,19 +162,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q                         &kp W  &kp E      &kp R                &kp T        &kp Y          &kp U               &kp I      &kp O    &kp P                                   &none
-&none  &hrmods_on_left LEFT_SHIFT A  &kp S  &kp D      &kp F                &kp G        &kp H          &kp J               &kp K      &kp L    &hrmods_on_right RIGHT_SHIFT SEMICOLON  &none
-&none  &hrmods_on_left LCTRL Z       &kp X  &kp C      &kp V                &kp B        &kp N          &kp M               &kp COMMA  &kp DOT  &hrmods_on_right RCTRL SLASH            &none
-                                            &lt 3 TAB  &numberlay 1 ESCAPE  &kp SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &lt 4 DEL
+&none  &kp Q  &kp W  &kp F      &kp P                &kp G                           &kp J          &kp L               &kp U      &kp Y    &kp SEMICOLON  &none
+&none  &kp A  &kp R  &kp S      &kp T                &kp D                           &kp H          &kp N               &kp E      &kp I    &kp O          &none
+&none  &kp Z  &kp X  &kp C      &kp V                &kp B                           &kp K          &kp M               &kp COMMA  &kp DOT  &kp SLASH      &none
+                     &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &lt 4 DEL
             >;
         };
 
         number {
             bindings = <
-&none  &none      &none     &none     &none  &none    &kp SLASH     &kp N7     &kp N8      &kp N9  &kp MINUS  &none
-&none  &kp LSHFT  &none     &none     &none  &none    &kp ASTERISK  &kp N4     &kp N5      &kp N6  &kp PLUS   &none
-&none  &kp LCTRL  &kp LGUI  &kp LALT  &none  &none    &kp PERCENT   &kp N1     &kp N2      &kp N3  &kp EQUAL  &none
-                            &none     &none  &none    &kp N0        &kp COMMA  &kp PERIOD
+&none  &none  &none  &none  &none  &none    &kp SLASH     &kp N7     &kp N8      &kp N9  &kp MINUS  &none
+&none  &none  &none  &none  &none  &none    &kp ASTERISK  &kp N4     &kp N5      &kp N6  &kp PLUS   &none
+&none  &none  &none  &none  &none  &none    &kp PERCENT   &kp N1     &kp N2      &kp N3  &kp EQUAL  &none
+                     &none  &none  &none    &kp N0        &kp COMMA  &kp PERIOD
             >;
         };
 
@@ -180,10 +189,10 @@
 
         nav+media {
             bindings = <
-&none  &none      &none         &none         &none  &none    &kp C_BRIGHTNESS_INC  &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP     &kp C_MENU  &none
-&none  &kp LSHFT  &none         &none         &none  &none    &kp C_BRIGHTNESS_DEC  &kp LEFT        &kp DOWN           &kp UP              &kp RIGHT   &none
-&none  &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &none  &none    &kp PRINTSCREEN       &kp C_PREVIOUS  &kp C_REWIND       &kp C_FAST_FORWARD  &kp C_NEXT  &none
-                                &none         &none  &none    &kp C_PLAY_PAUSE      &kp C_REPEAT    &kp C_SHUFFLE
+&none  &none  &none  &none  &none  &none             &kp C_BRIGHTNESS_INC  &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP     &none       &none
+&none  &none  &none  &none  &none  &none             &kp C_BRIGHTNESS_DEC  &kp LEFT        &kp DOWN           &kp UP              &kp RIGHT   &none
+&none  &none  &none  &none  &none  &none             &kp PRINTSCREEN       &kp C_PREVIOUS  &kp C_REWIND       &kp C_FAST_FORWARD  &kp C_NEXT  &none
+                     &none  &none  &kp LEFT_SHIFT    &kp C_PLAY_PAUSE      &kp C_REPEAT    &kp C_SHUFFLE
             >;
         };
 
@@ -202,6 +211,15 @@
 &none  &to 0  &kp F5  &kp F6   &kp F7   &kp F8       &kp COMMA      &kp N4     &kp N5      &kp N6  &to 0  &none
 &none  &to 0  &kp F9  &kp F10  &kp F11  &kp F12      &kp N0         &kp N1     &kp N2      &kp N3  &to 0  &none
                       &kp TAB  &to 0    &kp SPACE    &kp BACKSPACE  &kp ENTER  &kp DELETE
+            >;
+        };
+
+        QWERTY {
+            bindings = <
+&none  &kp Q                         &kp W  &kp E      &kp R                &kp T        &kp Y          &kp U               &kp I      &kp O    &kp P                                   &none
+&none  &hrmods_on_left LEFT_SHIFT A  &kp S  &kp D      &kp F                &kp G        &kp H          &kp J               &kp K      &kp L    &hrmods_on_right RIGHT_SHIFT SEMICOLON  &none
+&none  &hrmods_on_left LCTRL Z       &kp X  &kp C      &kp V                &kp B        &kp N          &kp M               &kp COMMA  &kp DOT  &hrmods_on_right RCTRL SLASH            &none
+                                            &lt 3 TAB  &numberlay 1 ESCAPE  &kp SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &lt 4 DEL
             >;
         };
     };
