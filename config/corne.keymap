@@ -179,10 +179,10 @@
 
         symbol {
             bindings = <
-&none  &kp GRAVE      &kp CARET             &kp DLLR  &kp LEFT_BRACE    &kp RIGHT_BRACE      &none  &none  &none  &none  &none  &none
-&none  &kp AMPERSAND  &kp LPAR              &kp RPAR  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES    &none  &none  &none  &none  &none  &none
-&none  &kp AT_SIGN    &kp NON_US_BACKSLASH  &kp PIPE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &none  &none  &none  &none  &none  &none
-                                            &kp HASH  &kp EXCLAMATION   &kp SPACE            &none  &none  &none
+&none  &kp GRAVE  &kp CARET             &kp DLLR  &kp LEFT_BRACE    &kp RIGHT_BRACE      &none  &none  &none  &none  &none  &none
+&none  &kp AT     &kp LPAR              &kp RPAR  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES    &none  &none  &none  &none  &none  &none
+&none  &kp UNDER  &kp NON_US_BACKSLASH  &kp PIPE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &none  &none  &none  &none  &none  &none
+                                        &kp HASH  &kp AMPS          &kp EXCL             &none  &none  &none
             >;
         };
 
