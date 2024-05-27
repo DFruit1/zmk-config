@@ -162,19 +162,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q                    &kp W  &kp F      &kp P                &kp G                           &kp J          &kp L               &kp U      &kp Y    &kp SEMICOLON                 &none
-&none  &kp A                    &kp R  &kp S      &kp T                &kp D                           &kp H          &kp N               &kp E      &kp I    &kp O                         &none
-&none  &hrmods_on_left LCTRL Z  &kp X  &kp C      &kp V                &kp B                           &kp K          &kp M               &kp COMMA  &kp DOT  &hrmods_on_right RCTRL SLASH  &none
-                                       &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &lt 4 DEL
+&none  &kp Q                    &kp W                   &kp F      &kp P                &kp G                           &kp J          &kp L               &kp U      &kp Y                         &kp SEMICOLON                 &none
+&none  &kp A                    &kp R                   &kp S      &kp T                &kp D                           &kp H          &kp N               &kp E      &kp I                         &kp O                         &none
+&none  &hrmods_on_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K          &kp M               &kp COMMA  &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
+                                                        &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &lt 4 DEL
             >;
         };
 
         number {
             bindings = <
-&none  &none      &none      &none         &none     &none    &kp ASTERISK  &kp KP_N7   &kp KP_N8  &kp KP_N9  &kp PLUS   &none
-&none  &kp LSHFT  &kp LCTRL  &kp LG(LGUI)  &kp LALT  &to 0    &kp SLASH     &kp KP_N4   &kp KP_N5  &kp KP_N6  &kp MINUS  &none
-&none  &none      &none      &none         &none     &none    &kp EQUAL     &kp KP_N1   &kp KP_N2  &kp KP_N3  &kp PRCNT  &none
-                             &none         &none     &none    &kp KP_N0     &kp PERIOD  &kp COMMA
+&none  &none      &none      &none         &none     &none    &kp ASTERISK  &kp N7      &kp N8     &kp N9  &kp PLUS   &none
+&none  &kp LSHFT  &kp LCTRL  &kp LG(LGUI)  &kp LALT  &to 0    &kp SLASH     &kp N4      &kp N5     &kp N6  &kp MINUS  &none
+&none  &none      &none      &none         &none     &none    &kp EQUAL     &kp N1      &kp N2     &kp N3  &kp PRCNT  &none
+                             &none         &none     &none    &kp N0        &kp PERIOD  &kp COMMA
             >;
         };
 
