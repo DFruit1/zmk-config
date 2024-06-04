@@ -186,10 +186,10 @@
 
         symbol {
             bindings = <
-&none  &kp GRAVE  &kp CARET             &kp DLLR  &kp LEFT_BRACE    &kp RIGHT_BRACE      &none  &none     &none     &none      &none      &none
-&none  &kp AT     &kp LPAR              &kp RPAR  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES    &to 0  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &none
-&none  &kp UNDER  &kp NON_US_BACKSLASH  &kp PIPE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &none  &kp RALT  &kp RGUI  &kp RCTRL  &kp RSHFT  &none
-                                        &kp HASH  &kp AMPS          &kp EXCL             &none  &none     &none
+&none  &kp GRAVE         &kp CARET             &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &none  &none     &none     &none      &none      &none
+&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES     &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &to 0  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &none
+&none  &kp UNDER         &kp NON_US_BACKSLASH  &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &none  &kp RALT  &kp RGUI  &kp RCTRL  &kp RSHFT  &none
+                                               &kp HASH         &kp AMPS              &kp AT_SIGN              &none  &none     &none
             >;
         };
 
