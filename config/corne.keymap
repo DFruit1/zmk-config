@@ -121,6 +121,16 @@
             retro-tap;
             hold-while-undecided;
         };
+
+        tap_or_tolayer: tap_or_tolayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_OR_TOLAYER";
+            bindings = <&to>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <240>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -138,6 +148,12 @@
             bindings = <&sk LEFT_ALT>;
             key-positions = <24 25 34 35>;
             layers = <0>;
+        };
+
+        ToAlphaBase {
+            bindings = <&to 0>;
+            key-positions = <38 39>;
+            timeout-ms = <240>;
         };
     };
 
@@ -168,10 +184,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q                    &kp W                   &kp F      &kp P                &kp G                           &kp J          &kp L               &kp U      &kp Y                         &kp SEMICOLON                 &none
-&none  &kp A                    &kp R                   &kp S      &kp T                &kp D                           &kp H          &kp N               &kp E      &kp I                         &kp O                         &none
-&none  &hrmods_on_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K          &kp M               &kp COMMA  &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
-                                                        &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &lt 4 DEL
+&none  &kp Q                    &kp W                   &kp F      &kp P                &kp G                           &kp J                        &kp L               &kp U                  &kp Y                         &kp SEMICOLON                 &none
+&none  &kp A                    &kp R                   &kp S      &kp T                &kp D                           &kp H                        &kp N               &kp E                  &kp I                         &kp O                         &none
+&none  &hrmods_on_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K                        &kp M               &kp COMMA              &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
+                                                        &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &tap_or_tolayer 1 BACKSPACE  &symbollay 2 ENTER  &tap_or_tolayer 3 DEL
             >;
         };
 
