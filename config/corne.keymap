@@ -154,18 +154,6 @@
             require-prior-idle-ms = <800>;
         };
 
-        Alt {
-            bindings = <&sk LEFT_ALT>;
-            key-positions = <24 25 34 35>;
-            layers = <0>;
-        };
-
-        ToAlphaBase {
-            bindings = <&to 0>;
-            key-positions = <38 39>;
-            timeout-ms = <240>;
-        };
-
         to_macro {
             bindings = <&tog 4>;
             key-positions = <0 11>;
