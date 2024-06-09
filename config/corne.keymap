@@ -122,9 +122,19 @@
             hold-while-undecided;
         };
 
-        tap_or_tolayer: tap_or_tolayer {
+        tap_or_num: tap_or_num {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAP_OR_TOLAYER";
+            label = "TAP_OR_NUM";
+            bindings = <&to>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <240>;
+            flavor = "tap-preferred";
+        };
+
+        tap_or_nav: tap_or_nav {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_OR_NAV";
             bindings = <&to>, <&kp>;
 
             #binding-cells = <2>;
@@ -155,6 +165,14 @@
             key-positions = <38 39>;
             timeout-ms = <240>;
         };
+
+        to_macro {
+            bindings = <&tog 4>;
+            key-positions = <0 11>;
+            timeout-ms = <240>;
+            require-prior-idle-ms = <800>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -184,10 +202,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q                    &kp W                   &kp F      &kp P                &kp G                           &kp J                        &kp L               &kp U                  &kp Y                         &kp SEMICOLON                 &none
-&none  &kp A                    &kp R                   &kp S      &kp T                &kp D                           &kp H                        &kp N               &kp E                  &kp I                         &kp O                         &none
-&none  &hrmods_on_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K                        &kp M               &kp COMMA              &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
-                                                        &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &tap_or_tolayer 1 BACKSPACE  &symbollay 2 ENTER  &tap_or_tolayer 3 DEL
+&none  &kp Q                    &kp W                   &kp F      &kp P                &kp G                           &kp J          &kp L               &kp U              &kp Y                         &tap_or_num 1 SEMICOLON       &none
+&none  &kp A                    &kp R                   &kp S      &kp T                &kp D                           &kp H          &kp N               &kp E              &kp I                         &kp O                         &none
+&none  &hrmods_on_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K          &kp M               &kp COMMA          &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
+                                                        &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &tap_or_nav 3 DEL
             >;
         };
 
@@ -203,8 +221,8 @@
         symbol {
             bindings = <
 &none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &none  &none     &none     &none      &none      &none
-&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &to 0  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &none
-&none  &kp UNDER         &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &none  &kp RALT  &kp RGUI  &kp RCTRL  &kp RSHFT  &none
+&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &to 0  &kp RALT  &kp RGUI  &kp RCTRL  &kp RSHFT  &none
+&none  &kp UNDER         &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &none  &none     &none     &none      &none      &none
                                             &kp HASH         &kp AMPS              &kp AT_SIGN              &none  &none     &none
             >;
         };
