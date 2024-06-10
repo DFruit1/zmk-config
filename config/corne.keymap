@@ -148,17 +148,25 @@
 
         ToFunction {
             bindings = <&tog 5>;
-            key-positions = <36 41>;
-            layers = <0>;
+            key-positions = <35 24>;
+            layers = <4>;
             timeout-ms = <240>;
-            require-prior-idle-ms = <800>;
+            require-prior-idle-ms = <1000>;
         };
 
         to_macro {
             bindings = <&tog 4>;
             key-positions = <0 11>;
             timeout-ms = <240>;
-            require-prior-idle-ms = <800>;
+            require-prior-idle-ms = <1000>;
+            layers = <3>;
+        };
+
+        to_alphabase {
+            bindings = <&to 0>;
+            key-positions = <36 41>;
+            timeout-ms = <240>;
+            require-prior-idle-ms = <5000>;
             layers = <0>;
         };
     };
@@ -190,37 +198,37 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q                    &kp W                   &kp F      &kp P                &kp G                           &kp J          &kp L               &kp U              &kp Y                         &tap_or_num 1 SEMICOLON       &none
-&none  &kp A                    &kp R                   &kp S      &kp T                &kp D                           &kp H          &kp N               &kp E              &kp I                         &kp O                         &none
-&none  &hrmods_on_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K          &kp M               &kp COMMA          &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
-                                                        &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &tap_or_nav 3 DEL
+&none  &kp Q                    &kp W                   &kp F      &kp P                &kp G                           &kp J          &kp L             &kp U              &kp Y                         &tap_or_num 1 SEMICOLON       &none
+&none  &kp A                    &kp R                   &kp S      &kp T                &kp D                           &kp H          &kp N             &kp E              &kp I                         &kp O                         &none
+&none  &hrmods_on_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K          &kp M             &kp COMMA          &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
+                                                        &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &tap_or_nav 3 DEL
             >;
         };
 
         number {
             bindings = <
-&none  &none      &none      &none      &none          &kp BACKSPACE                   &kp ASTERISK  &kp N7      &kp N8     &kp N9  &kp PLUS   &none
-&none  &kp LSHFT  &kp LCTRL  &kp LGUI   &kp LALT       &to 0                           &kp SLASH     &kp N4      &kp N5     &kp N6  &kp MINUS  &none
-&none  &none      &none      &none      &kp BSPC       &none                           &kp EQUAL     &kp N1      &kp N2     &kp N3  &kp PRCNT  &none
+&none  &none      &none      &none      &none          &none                           &kp ASTERISK  &kp N7      &kp N8     &kp N9  &kp PLUS   &none
+&none  &kp LSHFT  &kp LCTRL  &kp LGUI   &kp RET        &to 0                           &kp SLASH     &kp N4      &kp N5     &kp N6  &kp MINUS  &none
+&none  &none      &none      &none      &kp LALT       &none                           &kp EQUAL     &kp N1      &kp N2     &kp N3  &kp PRCNT  &none
                              &lt 3 TAB  &kp BACKSPACE  &spaceshift LEFT_SHIFT SPACE    &kp N0        &kp PERIOD  &kp COMMA
             >;
         };
 
         symbol {
             bindings = <
-&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &none  &none     &none     &none      &none      &none
-&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &to 0  &kp RALT  &kp RGUI  &kp RCTRL  &kp RSHFT  &none
-&none  &kp UNDER         &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &none  &none     &none     &none      &none      &none
-                                            &kp HASH         &kp AMPS              &kp AT_SIGN              &none  &none     &none
+&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &none          &none     &none     &none      &none      &none
+&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &to 0          &kp RALT  &kp RGUI  &kp RCTRL  &kp RSHFT  &none
+&none  &kp UNDER         &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &none          &kp LALT  &none     &none      &none      &none
+                                            &kp HASH         &kp AMPS              &kp AT_SIGN              &kp BACKSPACE  &none     &none
             >;
         };
 
         nav+media {
             bindings = <
-&none  &none      &none      &none     &none     &none    &none             &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none      &none
-&none  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT  &to 0    &kp PRINTSCREEN   &kp LEFT    &kp DOWN           &kp UP           &kp RIGHT  &none
-&none  &none      &none      &none     &none     &none    &none             &none       &kp N0             &kp DOT          &kp RET    &none
-                             &none     &none     &none    &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT
+&none  &none      &none      &none     &none     &none    &kp PRINTSCREEN   &kp C_MUTE          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LG(STAR)  &none
+&none  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp RET   &to 0    &kp PRINTSCREEN   &kp LEFT            &kp DOWN           &kp UP           &kp RIGHT     &none
+&none  &none      &none      &none     &kp LALT  &none    &kp LA(F3)        &kp LG(LEFT_ARROW)  &kp N0             &kp DOT          &kp RET       &none
+                             &none     &none     &none    &kp C_PLAY_PAUSE  &kp C_PREV          &kp C_NEXT
             >;
         };
 
