@@ -117,8 +117,7 @@
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <30>;
-            retro-tap;
+            tapping-term-ms = <300>;
             hold-while-undecided;
         };
 
@@ -208,24 +207,24 @@
         number {
             bindings = <
 &none  &none      &kp LG(LEFT)  &kp LG(RIGHT)  &kp LG(UP)     &none                           &kp ASTERISK  &kp N7      &kp N8     &kp N9  &kp PLUS   &none
-&none  &kp LSHFT  &kp LCTRL     &kp LGUI       &kp RET        &to 0                           &kp SLASH     &kp N4      &kp N5     &kp N6  &kp MINUS  &none
-&none  &none      &none         &none          &kp LALT       &none                           &kp EQUAL     &kp N1      &kp N2     &kp N3  &kp PRCNT  &none
+&none  &kp LSHFT  &kp LCTRL     &kp LGUI       &kp RET        &to 0                           &kp EQUAL     &kp N4      &kp N5     &kp N6  &kp MINUS  &none
+&none  &none      &none         &none          &kp LALT       &none                           &kp PERCENT   &kp N1      &kp N2     &kp N3  &kp FSLH   &none
                                 &lt 3 TAB      &kp BACKSPACE  &spaceshift LEFT_SHIFT SPACE    &kp N0        &kp PERIOD  &kp COMMA
             >;
         };
 
         symbol {
             bindings = <
-&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &none          &none     &none     &none      &none      &none
-&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &to 0          &kp RALT  &kp RGUI  &kp RCTRL  &kp RSHFT  &none
-&none  &kp UNDER         &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &none          &kp LALT  &none     &none      &none      &none
+&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &none          &kp RALT  &kp RGUI  &kp RCTRL  &kp RSHFT  &none
+&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &to 0          &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &none
+&none  &kp UNDERSCORE    &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &none          &kp LALT  &none     &none      &none      &none
                                             &kp HASH         &kp AMPS              &kp AT_SIGN              &kp BACKSPACE  &none     &none
             >;
         };
 
         nav+media {
             bindings = <
-&none  &none      &none      &none     &none     &none    &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &none      &none
+&none  &none      &none      &none     &none     &none    &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp HOME   &none
 &none  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp RET   &to 0    &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT  &none
 &none  &none      &none      &none     &kp LALT  &none    &kp LA(F3)        &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &kp END    &none
                              &none     &none     &none    &kp C_PLAY_PAUSE  &kp C_PREV            &kp C_NEXT
