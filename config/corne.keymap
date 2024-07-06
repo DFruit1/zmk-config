@@ -265,10 +265,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q               &kp W                   &kp F      &kp P                &kp G                           &kp J                             &kp L             &kp U              &kp Y                         &tap_or_num 1 SEMICOLON       &none
-&none  &kp A               &kp R                   &kp S      &kp T                &kp D                           &kp H                             &kp N             &kp E              &kp I                         &kp O                         &none
-&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K                             &kp M             &kp COMMA          &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
-                                                   &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &backshift RIGHT_SHIFT BACKSPACE  &symbollay 2 RET  &tap_or_nav 3 DEL
+&none  &kp Q               &kp W                   &kp F      &kp P                &kp G                           &kp J          &kp L             &kp U              &kp Y                         &tap_or_num 1 SEMICOLON       &none
+&none  &kp A               &kp R                   &kp S      &kp T                &kp D                           &kp H          &kp N             &kp E              &kp I                         &kp O                         &none
+&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K          &kp M             &kp COMMA          &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
+                                                   &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &tap_or_nav 3 DEL
             >;
         };
 
