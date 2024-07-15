@@ -278,9 +278,9 @@
 
         symbol {
             bindings = <
-&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE                    &none          &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
+&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE                    &none          &kp RALT  &kp RGUI   &kp RCTRL  &kp RSHFT  &none
 &none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS              &kp F4         &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
-&none  &kp UNDERSCORE    &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET                  &kp TILDE      &kp RALT  &kp RGUI   &kp RCTRL  &kp RSHFT  &none
+&none  &kp UNDERSCORE    &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET                  &kp TILDE      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
                                             &kp HASH         &kp AMPS              &caps_word_hold AT_SIGN AT_SIGN    &kp BACKSPACE  &none     &none
             >;
         };
