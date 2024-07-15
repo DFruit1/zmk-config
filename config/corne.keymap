@@ -148,9 +148,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <180>;
-            hold-while-undecided;
             require-prior-idle-ms = <400>;
-            hold-trigger-on-release;
         };
 
         hold4home: hold4home {
@@ -192,9 +190,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <180>;
-            hold-while-undecided;
             require-prior-idle-ms = <400>;
-            hold-trigger-on-release;
         };
     };
 
