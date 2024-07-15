@@ -123,20 +123,20 @@
         tap_or_num: tap_or_num {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_OR_NUM";
-            bindings = <&tog>, <&to>;
+            bindings = <&to>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "balanced";
+            tapping-term-ms = <240>;
+            flavor = "tap-preferred";
         };
 
         tap_or_nav: tap_or_nav {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_OR_NAV";
-            bindings = <&tog>, <&to>;
+            bindings = <&to>, <&to>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <240>;
             flavor = "balanced";
         };
 
@@ -249,16 +249,16 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q               &kp W                   &kp F      &kp P                &kp G                           &kp J          &kp L             &kp U       &kp Y                         &alt_right RALT SEMICOLON     &none
-&none  &kp A               &kp R                   &kp S      &kp T                &kp D                           &kp H          &kp N             &kp E       &kp I                         &kp O                         &none
-&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K          &kp M             &kp COMMA   &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
+&none  &kp Q               &kp W                   &kp F      &kp P                &kp G                           &kp J          &kp L             &kp U                  &kp Y                         &tap_or_num 1 SEMICOLON       &none
+&none  &kp A               &kp R                   &kp S      &kp T                &kp D                           &kp H          &kp N             &kp E                  &kp I                         &kp O                         &none
+&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
                                                    &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &kp DELETE
             >;
         };
 
         number {
             bindings = <
-&none  &tap_or_num 0 1  &kp LBKT   &kp RBKT   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp ASTERISK  &kp N7               &kp N8                 &kp N9  &kp PLUS   &none
+&none  &tap_or_nav 3 0  &kp LBKT   &kp RBKT   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp ASTERISK  &kp N7               &kp N8                 &kp N9  &kp PLUS   &none
 &none  &kp LSHFT        &kp LCTRL  &kp LGUI   &kp LALT              &kp BACKSPACE                   &kp EQUAL     &kp N4               &kp N5                 &kp N6  &kp MINUS  &none
 &none  &none            &none      &none      &kp RET               &kp DELETE                      &kp PERCENT   &kp N1               &kp N2                 &kp N3  &kp FSLH   &none
                                    &lt 3 TAB  &kp ESCAPE            &spaceshift LEFT_SHIFT SPACE    &kp N0        &symbollay 2 PERIOD  &ctrl_num LCTRL COMMA
