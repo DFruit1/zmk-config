@@ -192,6 +192,17 @@
             tapping-term-ms = <180>;
             require-prior-idle-ms = <400>;
         };
+
+        gui_right: gui_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GUI_RIGHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <180>;
+            require-prior-idle-ms = <400>;
+        };
     };
 
     combos {
@@ -249,9 +260,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q               &kp W                   &kp F      &kp P                &kp G                           &kp J          &kp L             &kp U                  &kp Y                         &tap_or_num 1 SEMICOLON       &none
-&none  &kp A               &kp R                   &kp S      &kp T                &kp D                           &kp H          &kp N             &kp E                  &kp I                         &kp O                         &none
-&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &hrmods_on_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
+&none  &kp Q               &kp W                   &kp F      &kp P                &kp G                           &kp J          &kp L             &kp U                  &kp Y                   &tap_or_num 1 SEMICOLON       &none
+&none  &kp A               &kp R                   &kp S      &kp T                &kp D                           &kp H          &kp N             &kp E                  &kp I                   &kp O                         &none
+&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C      &kp V                &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &hrmods_on_right RCTRL SLASH  &none
                                                    &lt 3 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &kp DELETE
             >;
         };
