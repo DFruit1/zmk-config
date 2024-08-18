@@ -117,7 +117,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             hold-while-undecided;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
         };
 
         tap_or_num: tap_or_num {
@@ -209,7 +209,7 @@
         compatible = "zmk,combos";
 
         ToFunction {
-            bindings = <&tog 5>;
+            bindings = <&tog 0>;
             key-positions = <35 24>;
             layers = <4>;
             timeout-ms = <240>;
@@ -269,28 +269,28 @@
 
         number {
             bindings = <
-&none  &kp F4     &kp LBKT   &kp RBKT   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp ASTERISK  &kp N7               &kp N8                 &kp N9  &kp PLUS   &none
-&none  &kp LSHFT  &kp LCTRL  &kp LGUI   &kp LALT              &kp BACKSPACE                   &kp EQUAL     &kp N4               &kp N5                 &kp N6  &kp MINUS  &none
-&none  &to 0      &none      &kp F4     &kp RET               &kp DELETE                      &kp PERCENT   &kp N1               &kp N2                 &kp N3  &kp FSLH   &none
-                             &lt 3 TAB  &kp ESCAPE            &spaceshift LEFT_SHIFT SPACE    &kp N0        &symbollay 2 PERIOD  &ctrl_num LCTRL COMMA
+&none  &kp F1     &kp F2     &kp F3     &kp F4      &kp F5                          &kp ASTERISK  &kp N7               &kp N8                 &kp N9  &kp PLUS   &none
+&none  &kp LSHFT  &kp LCTRL  &kp LGUI   &kp LALT    &kp BACKSPACE                   &kp EQUAL     &kp N4               &kp N5                 &kp N6  &kp MINUS  &none
+&none  &to 0      &kp F6     &kp F7     &kp RET     &kp DELETE                      &kp PERCENT   &kp N1               &kp N2                 &kp N3  &kp FSLH   &none
+                             &lt 3 TAB  &kp ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp N0        &symbollay 2 PERIOD  &ctrl_num LCTRL COMMA
             >;
         };
 
         symbol {
             bindings = <
-&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp COLON      &kp RALT  &kp RGUI   &kp RCTRL  &kp RSHFT  &none
-&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &caps_word     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &none
-&none  &kp UNDERSCORE    &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp TILDE      &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none
-                                            &kp HASH         &kp AMPS              &kp AT_SIGN              &kp BACKSPACE  &none     &none
+&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &caps_word     &kp RALT  &kp RGUI    &kp RCTRL  &kp RSHFT  &none
+&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp COLON      &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT  &none
+&none  &kp UNDERSCORE    &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp TILDE      &kp HOME  &kp PG_DN   &kp PG_UP  &kp END    &none
+                                            &kp HASH         &kp AMPS              &kp AT_SIGN              &kp BACKSPACE  &none     &kp DELETE
             >;
         };
 
         nav+media {
             bindings = <
-&none  &tap_or_nav 0 3  &kp LC(LA(DELETE))  &none      &none                &kp F4            &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp HOME   &none
-&none  &kp LSHFT        &kp LCTRL           &kp LGUI   &kp LALT             &kp BACKSPACE     &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT  &none
-&none  &kp LC(Z)        &kp LC(Y)           &kp LC(F)  &kp RET              &kp DELETE        &kp LA(F3)        &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &kp END    &none
-                                            &kp TAB    &numberlay 1 ESCAPE  &mt CAPS SPACE    &kp C_PLAY_PAUSE  &kp C_PREV            &kp C_NEXT
+&none  &kp F8     &kp F9     &kp F10    &kp F11              &kp F12           &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp HOME   &none
+&none  &kp LSHFT  &kp LCTRL  &kp LGUI   &kp LALT             &kp BACKSPACE     &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT  &none
+&none  &kp LC(Z)  &kp LC(Y)  &kp LC(F)  &kp RET              &kp DELETE        &kp LA(F3)        &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &kp END    &none
+                             &kp TAB    &numberlay 1 ESCAPE  &mt CAPS SPACE    &kp C_PLAY_PAUSE  &kp C_PREV            &kp C_NEXT
             >;
         };
 
@@ -300,15 +300,6 @@
 &none  &none          &none        &none         &none        &kp LC(LA(DELETE))    &to 0   &none   &none   &none  &none  &none
 &none  &BT0           &BT1         &BT2          &BT3         &BT4                  &none   &none   &none   &none  &none  &none
                                    &kp CAPSLOCK  &key_repeat  &caps_word_hold       &trans  &trans  &trans
-            >;
-        };
-
-        Function {
-            bindings = <
-&none  &to 0  &kp F1  &kp F2   &kp F3   &kp F4       &kp PERIOD     &kp N7  &kp N8  &kp N9  &to 0  &none
-&none  &to 0  &kp F5  &kp F6   &kp F7   &kp F8       &kp COMMA      &kp N4  &kp N5  &kp N6  &to 0  &none
-&none  &to 0  &kp F9  &kp F10  &kp F11  &kp F12      &kp N0         &kp N1  &kp N2  &kp N3  &to 0  &none
-                      &to 3    &to 1    &kp SPACE    &kp BACKSPACE  &to 2   &to 4
             >;
         };
     };
