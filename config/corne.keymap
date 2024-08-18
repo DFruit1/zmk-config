@@ -130,16 +130,6 @@
             flavor = "tap-preferred";
         };
 
-        tap_or_nav: tap_or_nav {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAP_OR_NAV";
-            bindings = <&to>, <&to>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <240>;
-            flavor = "balanced";
-        };
-
         ctrl_left: ctrl_left {
             compatible = "zmk,behavior-hold-tap";
             label = "CTRL_LEFT";
@@ -149,16 +139,6 @@
             flavor = "balanced";
             tapping-term-ms = <180>;
             require-prior-idle-ms = <500>;
-        };
-
-        hold4home: hold4home {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD4HOME";
-            bindings = <&to>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
         };
 
         ctrl_num: ctrl_num {
@@ -205,33 +185,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        ToFunction {
-            bindings = <&tog 0>;
-            key-positions = <35 24>;
-            layers = <4>;
-            timeout-ms = <240>;
-            require-prior-idle-ms = <1000>;
-        };
-
-        to_macro {
-            bindings = <&tog 4>;
-            key-positions = <0 11>;
-            timeout-ms = <240>;
-            require-prior-idle-ms = <1000>;
-            layers = <3>;
-        };
-
-        to_alphabase {
-            bindings = <&to 0>;
-            key-positions = <36 41>;
-            timeout-ms = <240>;
-            require-prior-idle-ms = <5000>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         hopeurwell: hopeurwell {
