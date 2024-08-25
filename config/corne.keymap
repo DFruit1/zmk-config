@@ -138,18 +138,18 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <180>;
-            require-prior-idle-ms = <500>;
+            require-prior-idle-ms = <400>;
         };
 
-        ctrl_num: ctrl_num {
+        macrolay: macrolay {
             compatible = "zmk,behavior-hold-tap";
-            label = "CTRL_NUM";
-            bindings = <&kp>, <&kp>;
+            label = "MACROLAY";
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <240>;
-            hold-while-undecided;
+            flavor = "balanced";
+            tapping-term-ms = <180>;
+            require-prior-idle-ms = <400>;
         };
 
         caps_word_hold: caps_word_hold {
@@ -185,7 +185,25 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        to_nav {
+            bindings = <&to 3>;
+            key-positions = <11 35>;
+            require-prior-idle-ms = <800>;
+            timeout-ms = <90>;
+            layers = <0>;
+        };
+
+        to_base {
+            bindings = <&to 0>;
+            key-positions = <11 35>;
+            timeout-ms = <100>;
+            layers = <3 1 4 2>;
+            require-prior-idle-ms = <500>;
+        };
+    };
 
     macros {
         hopeurwell: hopeurwell {
@@ -223,10 +241,10 @@
 
         number {
             bindings = <
-&none  &kp F1     &kp F3     &kp F5     &kp F6      &kp F7                          &kp ASTERISK  &kp N7               &kp N8                 &kp N9  &kp PLUS   &none
-&none  &kp LSHFT  &kp LCTRL  &kp LGUI   &kp LALT    &kp BACKSPACE                   &kp EQUAL     &kp N4               &kp N5                 &kp N6  &kp MINUS  &none
-&none  &to 0      &kp F2     &kp F4     &kp RET     &kp DELETE                      &kp PERCENT   &kp N1               &kp N2                 &kp N3  &kp FSLH   &none
-                             &lt 3 TAB  &kp ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp N0        &symbollay 2 PERIOD  &ctrl_num LCTRL COMMA
+&none  &kp F1      &kp F3     &kp F5     &kp F6      &kp F7                          &kp ASTERISK  &kp N7               &kp N8             &kp N9  &kp PLUS   &none
+&none  &kp LSHFT   &kp LCTRL  &kp LGUI   &kp LALT    &kp BACKSPACE                   &kp EQUAL     &kp N4               &kp N5             &kp N6  &kp MINUS  &none
+&none  &caps_word  &kp F2     &kp F4     &kp RET     &kp DELETE                      &kp PERCENT   &kp N1               &kp N2             &kp N3  &kp FSLH   &none
+                              &lt 3 TAB  &kp ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp N0        &symbollay 2 PERIOD  &macrolay 4 COMMA
             >;
         };
 
@@ -241,19 +259,19 @@
 
         nav+media {
             bindings = <
-&none  &kp F8     &kp F9     &kp F10    &kp F11              &kp F12           &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp HOME   &none
-&none  &kp LSHFT  &kp LCTRL  &kp LGUI   &kp LALT             &kp BACKSPACE     &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT  &none
-&none  &kp LC(Z)  &kp LC(Y)  &kp LC(F)  &kp RET              &kp DELETE        &kp LA(F3)        &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &kp END    &none
+&none  &kp F8     &kp F9     &kp F10    &kp F11              &kp F12           &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp LC(PLUS)   &none
+&none  &kp LSHFT  &kp LCTRL  &kp LGUI   &kp LALT             &kp BACKSPACE     &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT      &none
+&none  &kp LC(Z)  &kp LC(Y)  &kp LC(F)  &kp RET              &kp DELETE        &kp LA(F3)        &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &kp LC(MINUS)  &none
                              &kp TAB    &numberlay 1 ESCAPE  &mt CAPS SPACE    &kp C_PLAY_PAUSE  &kp C_PREV            &kp C_NEXT
             >;
         };
 
         macros {
             bindings = <
-&none  &DisconnectBT  &hopeurwell  &kindregards  &kp F4       &kp PRINTSCREEN       &none   &none   &none   &none  &none  &none
-&none  &none          &none        &none         &none        &kp LC(LA(DELETE))    &to 0   &none   &none   &none  &none  &none
-&none  &BT0           &BT1         &BT2          &BT3         &BT4                  &none   &none   &none   &none  &none  &none
-                                   &kp CAPSLOCK  &key_repeat  &caps_word_hold       &trans  &trans  &trans
+&none  &DisconnectBT  &hopeurwell  &kindregards  &kp F4       &kp PRINTSCREEN       &none  &none  &none  &none  &none  &none
+&none  &none          &none        &none         &none        &kp LC(LA(DELETE))    &to 0  &none  &none  &none  &none  &none
+&none  &BT0           &BT1         &BT2          &BT3         &BT4                  &none  &none  &none  &none  &none  &none
+                                   &kp CAPSLOCK  &key_repeat  &caps_word_hold       &none  &none  &none
             >;
         };
     };
