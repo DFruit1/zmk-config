@@ -193,15 +193,6 @@
             key-positions = <11 35>;
             require-prior-idle-ms = <800>;
             timeout-ms = <90>;
-            layers = <1>;
-        };
-
-        to_base {
-            bindings = <&to 0>;
-            key-positions = <11 35>;
-            timeout-ms = <100>;
-            layers = <3 4 2>;
-            require-prior-idle-ms = <500>;
         };
     };
 
