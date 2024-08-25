@@ -193,14 +193,14 @@
             key-positions = <11 35>;
             require-prior-idle-ms = <800>;
             timeout-ms = <90>;
-            layers = <0>;
+            layers = <1>;
         };
 
         to_base {
             bindings = <&to 0>;
             key-positions = <11 35>;
             timeout-ms = <100>;
-            layers = <3 1 4 2>;
+            layers = <3 4 2>;
             require-prior-idle-ms = <500>;
         };
     };
@@ -241,10 +241,10 @@
 
         number {
             bindings = <
-&none  &kp F1      &kp F3     &kp F5     &kp F6      &kp F7                          &kp ASTERISK  &kp N7               &kp N8             &kp N9  &kp PLUS   &none
-&none  &kp LSHFT   &kp LCTRL  &kp LGUI   &kp LALT    &kp BACKSPACE                   &kp EQUAL     &kp N4               &kp N5             &kp N6  &kp MINUS  &none
-&none  &caps_word  &kp F2     &kp F4     &kp RET     &kp DELETE                      &kp PERCENT   &kp N1               &kp N2             &kp N3  &kp FSLH   &none
-                              &lt 3 TAB  &kp ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp N0        &symbollay 2 PERIOD  &macrolay 4 COMMA
+&none  &kp F1     &kp F3     &kp F5     &kp F6      &kp F7                          &kp ASTERISK  &kp N7               &kp N8             &kp N9  &kp PLUS   &none
+&none  &kp LSHFT  &kp LCTRL  &kp LGUI   &kp LALT    &kp BACKSPACE                   &kp EQUAL     &kp N4               &kp N5             &kp N6  &kp MINUS  &none
+&none  &to 0      &kp F2     &kp F4     &kp RET     &kp DELETE                      &kp PERCENT   &kp N1               &kp N2             &kp N3  &kp FSLH   &none
+                             &lt 3 TAB  &kp ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp N0        &symbollay 2 PERIOD  &macrolay 4 COMMA
             >;
         };
 
