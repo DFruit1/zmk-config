@@ -222,6 +222,13 @@
             bindings = <&kp LS(K) &kp I &kp N &kp D &kp SPACE &kp LS(R) &kp E &kp G &kp A &kp R &kp D &kp S &kp COMMA &kp RET>;
             label = "KINGREGARDS";
         };
+
+        spacethenshift: spacethenshift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &sk LEFT_SHIFT>;
+            label = "SPACETHENSHIFT";
+        };
     };
 
     keymap {
@@ -253,10 +260,10 @@
 
         symbol {
             bindings = <
-&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &caps_word     &kp RALT  &kp RGUI    &kp RCTRL  &kp RSHFT  &none
-&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp COLON      &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT  &none
+&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp COLON      &kp RALT  &kp RGUI    &kp RCTRL  &kp RSHFT  &none
+&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp AT_SIGN    &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT  &none
 &none  &kp UNDERSCORE    &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp TILDE      &kp HOME  &kp PG_DN   &kp PG_UP  &kp END    &none
-                                            &kp HASH         &kp AMPS              &kp AT_SIGN              &kp BACKSPACE  &none     &kp DELETE
+                                            &kp HASH         &kp AMPS              &spacethenshift          &kp BACKSPACE  &none     &kp DELETE
             >;
         };
 
