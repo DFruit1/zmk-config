@@ -204,6 +204,17 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <400>;
         };
+
+        baselay: baselay {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BASELAY";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <300>;
+            hold-while-undecided;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -251,19 +262,19 @@
 
         number {
             bindings = <
-&none  &kp F1      &kp F3     &kp F5     &kp F6      &kp F7                          &kp ASTERISK  &kp N7               &kp N8             &kp N9  &kp PLUS   &none
-&none  &to 0       &kp LCTRL  &kp LGUI   &kp LALT    &kp BACKSPACE                   &kp EQUAL     &kp N4               &kp N5             &kp N6  &kp MINUS  &none
-&none  &caps_word  &kp F2     &kp F4     &kp RET     &kp DELETE                      &kp PERCENT   &kp N1               &kp N2             &kp N3  &kp FSLH   &none
-                              &lt 3 TAB  &kp ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp N0        &symbollay 2 PERIOD  &macrolay 4 COMMA
+&none  &kp F1      &kp F3     &kp F5     &kp F6             &kp F7                          &kp ASTERISK  &kp N7               &kp N8             &kp N9  &kp PLUS   &none
+&none  &to 0       &kp LCTRL  &kp LGUI   &kp LALT           &kp BACKSPACE                   &kp EQUAL     &kp N4               &kp N5             &kp N6  &kp MINUS  &none
+&none  &caps_word  &kp F2     &kp F4     &kp RET            &kp DELETE                      &kp PERCENT   &kp N1               &kp N2             &kp N3  &kp FSLH   &none
+                              &lt 3 TAB  &baselay 0 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp N0        &symbollay 2 PERIOD  &macrolay 4 COMMA
             >;
         };
 
         symbol {
             bindings = <
-&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp COLON      &kp RALT  &kp RGUI    &kp RCTRL  &kp RSHFT  &none
-&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp AT_SIGN    &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT  &none
+&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &none          &kp RALT  &kp RGUI    &kp RCTRL  &kp RSHFT  &none
+&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp COLON      &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT  &none
 &none  &kp UNDERSCORE    &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp TILDE      &kp HOME  &kp PG_DN   &kp PG_UP  &kp END    &none
-                                            &kp HASH         &kp AMPS              &spacethenshift          &kp BACKSPACE  &none     &kp DELETE
+                                            &kp HASH         &kp AMPS              &kp AT_SIGN              &kp BACKSPACE  &none     &kp DELETE
             >;
         };
 
