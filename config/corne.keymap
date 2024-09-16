@@ -203,6 +203,17 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        baselay: baselay {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BASELAY";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <300>;
+            hold-while-undecided;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -250,10 +261,10 @@
 
         number {
             bindings = <
-&none  &kp F1                    &kp F3     &kp F5     &kp F6        &kp F7                          &kp ASTERISK   &kp N7              &kp N8        &kp N9  &kp PLUS             &none
-&none  &to 0                     &kp LCTRL  &kp LGUI   &kp LALT      &kp COLON                       &kp EQUAL      &kp N4              &kp N5        &kp N6  &kp MINUS            &none
-&none  &capswordtap_or_base 0 0  &kp F2     &kp F4     &kp F11       &kp PERCENT                     &kp N0         &kp N1              &kp N2        &kp N3  &tap_or_base 0 FSLH  &none
-                                            &lt 3 TAB  &lt 5 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &lt 5 PERIOD
+&none  &kp F1                    &kp F3     &kp F5     &kp F6             &kp F7                          &kp ASTERISK   &kp N7              &kp N8             &kp N9  &kp PLUS             &none
+&none  &to 0                     &kp LCTRL  &kp LGUI   &kp LALT           &kp COLON                       &kp EQUAL      &kp N4              &kp N5             &kp N6  &kp MINUS            &none
+&none  &capswordtap_or_base 0 0  &kp F2     &kp F4     &kp F11            &kp PERCENT                     &kp N0         &kp N1              &kp N2             &kp N3  &tap_or_base 0 FSLH  &none
+                                            &lt 3 TAB  &baselay 5 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &baselay 5 PERIOD
             >;
         };
 
