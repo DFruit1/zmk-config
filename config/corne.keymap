@@ -97,17 +97,6 @@
             require-prior-idle-ms = <600>;
         };
 
-        hrmods_on_right: hrmods_on_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRMODS_ON_RIGHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <200>;
-            require-prior-idle-ms = <600>;
-        };
-
         spaceshift: spaceshift {
             compatible = "zmk,behavior-hold-tap";
             label = "SPACESHIFT";
@@ -138,7 +127,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <180>;
-            require-prior-idle-ms = <400>;
+            require-prior-idle-ms = <50>;
         };
 
         macrolay: macrolay {
@@ -190,7 +179,7 @@
             bindings = <&to>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <240>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -216,15 +205,14 @@
             hold-while-undecided;
         };
 
-        ctrl_right: ctrl_right {
+        capswordtap_or_base: capswordtap_or_base {
             compatible = "zmk,behavior-hold-tap";
-            label = "CTRL_RIGHT";
-            bindings = <&kp>, <&kp>;
+            label = "CAPSWORDTAP_OR_BASE";
+            bindings = <&to>, <&caps_word>;
 
             #binding-cells = <2>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            tapping-term-ms = <280>;
-            require-prior-idle-ms = <1000>;
         };
     };
 
@@ -273,17 +261,17 @@
 
         number {
             bindings = <
-&none  &kp F1            &kp F3     &kp F5     &kp F6             &kp F7                          &kp ASTERISK   &kp N7              &kp N8      &kp N9  &kp PLUS   &none
-&none  &caps_word        &kp LCTRL  &kp LGUI   &kp LALT           &kp A                           &kp EQUAL      &kp N4              &kp N5      &kp N6  &kp MINUS  &none
-&none  &tap_or_base 0 A  &kp F2     &kp F4     &kp A              &kp PERCENT                     &kp N0         &kp N1              &kp N2      &kp N3  &kp FSLH   &none
-                                    &lt 3 TAB  &baselay 0 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &kp PERIOD
+&none  &kp F1                    &kp F3     &kp F5     &kp F6             &kp F7                          &kp ASTERISK   &kp N7              &kp N8             &kp N9  &kp PLUS             &none
+&none  &to 0                     &kp LCTRL  &kp LGUI   &kp LALT           &kp COLON                       &kp EQUAL      &kp N4              &kp N5             &kp N6  &kp MINUS            &none
+&none  &capswordtap_or_base 0 0  &kp F2     &kp F4     &kp F11            &kp PERCENT                     &kp N0         &kp N1              &kp N2             &kp N3  &tap_or_base 0 FSLH  &none
+                                            &lt 3 TAB  &baselay 0 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &baselay 0 PERIOD
             >;
         };
 
         symbol {
             bindings = <
-&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &none          &kp RALT  &kp RGUI    &kp RCTRL  &kp RSHFT  &none
-&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp COLON      &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT  &none
+&none  &kp GRAVE         &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE          &kp F4         &kp RALT  &kp RGUI    &kp RCTRL  &kp RSHFT  &none
+&none  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp F2         &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT  &none
 &none  &kp UNDERSCORE    &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET        &kp TILDE      &kp HOME  &kp PG_DN   &kp PG_UP  &kp END    &none
                                             &kp HASH         &kp AMPS              &kp AT_SIGN              &kp BACKSPACE  &none     &kp DELETE
             >;
@@ -291,9 +279,9 @@
 
         nav+media {
             bindings = <
-&none  &kp F8                &kp F9     &kp F10          &kp F11              &kp F12                         &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp LC(KP_PLUS)  &none
-&none  &to 0                 &kp LCTRL  &kp LGUI         &kp LALT             &kp BACKSPACE                   &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT        &none
-&none  &tap_or_base 0 LC(Z)  &kp LC(Y)  &kp LC(F)        &kp RET              &kp DELETE                      &kp LA(F3)        &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &kp LC(MINUS)    &none
+&none  &kp F8                &kp F9     &kp F10          &kp F11              &kp F12                         &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp LC(KP_PLUS)           &none
+&none  &to 0                 &kp LCTRL  &kp LGUI         &kp LALT             &kp BACKSPACE                   &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT                 &none
+&none  &tap_or_base 0 LC(Z)  &kp LC(Y)  &kp LC(F)        &kp RET              &kp DELETE                      &kp LA(F3)        &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &tap_or_base 0 LC(MINUS)  &none
                                         &macrolay 4 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp C_PLAY_PAUSE  &kp C_PREV            &kp C_NEXT
             >;
         };
