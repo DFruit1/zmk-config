@@ -225,6 +225,16 @@
             tapping-term-ms = <100>;
             hold-while-undecided;
         };
+
+        layer_hrm: layer_hrm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_HRM";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -272,28 +282,28 @@
 
         number {
             bindings = <
-&none  &kp F1                            &kp F3     &kp F5     &kp F6             &kp F7                          &kp ASTERISK   &kp N7              &kp N8             &kp N9  &kp PLUS             &none
-&none  &taptobase_or_shift LEFT_SHIFT 0  &kp LCTRL  &kp LGUI   &kp LALT           &kp COLON                       &kp EQUAL      &kp N4              &kp N5             &kp N6  &kp MINUS            &none
-&none  &capswordtap_or_base 0 0          &kp F2     &kp F4     &kp F11            &kp PERCENT                     &kp N0         &kp N1              &kp N2             &kp N3  &tap_or_base 0 FSLH  &none
-                                                    &lt 3 TAB  &baselay 5 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &baselay 5 PERIOD
+&none  &kp F1                         &kp F3                    &kp F5                 &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8             &kp N9  &kp PLUS             &none
+&none  &layer_hrm LEFT_SHIFT PERCENT  &layer_hrm LCTRL AT_SIGN  &layer_hrm LGUI TILDE  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5             &kp N6  &kp MINUS            &none
+&none  &tap_or_base 0 COLON           &kp F2                    &kp F4                 &kp GREATER_THAN           &to 0                           &kp N0         &kp N1              &kp N2             &kp N3  &tap_or_base 0 FSLH  &none
+                                                                &lt 3 TAB              &baselay 5 ESCAPE          &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &baselay 5 PERIOD
             >;
         };
 
         symbol {
             bindings = <
-&none  &kp GRAVE                    &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE                   &kp F4         &mt RIGHT_ALT LC(LS(LEFT))  &mt RIGHT_GUI LC(LS(DOWN))  &mt RCTRL LC(LS(UP))  &mt RIGHT_SHIFT LC(LS(RIGHT))  &none
-&none  &kp SINGLE_QUOTE             &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS             &kp F2         &kp LEFT                    &kp DOWN                    &kp UP                &kp RIGHT                      &none
-&none  &ctrl_left LCTRL UNDERSCORE  &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET                 &kp TILDE      &kp HOME                    &kp PG_DN                   &kp PG_UP             &kp END                        &none
-                                                       &kp HASH         &kp AMPS              &spaceshift LEFT_SHIFT AT_SIGN    &kp BACKSPACE  &none                       &kp DELETE
+&none  &kp GRAVE                    &kp CARET          &kp DLLR         &kp LEFT_BRACE        &kp RIGHT_BRACE                 &none          &mt RIGHT_ALT LC(LS(LEFT))  &mt RIGHT_GUI LC(LS(DOWN))  &mt RCTRL LC(LS(UP))  &mt RIGHT_SHIFT LC(LS(RIGHT))  &none
+&none  &kp SINGLE_QUOTE             &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &none          &kp LEFT                    &kp DOWN                    &kp UP                &kp RIGHT                      &none
+&none  &ctrl_left LCTRL UNDERSCORE  &kp BSLH           &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET               &none          &kp HOME                    &kp PG_DN                   &kp PG_UP             &kp END                        &none
+                                                       &kp HASH         &kp AMPS              &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &none                       &kp DELETE
             >;
         };
 
         nav+media {
             bindings = <
-&none  &kp F8                            &kp F9     &kp F10          &kp F11              &kp F12                         &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp LC(KP_PLUS)           &none
-&none  &taptobase_or_shift LEFT_SHIFT 0  &kp LCTRL  &kp LGUI         &kp LALT             &kp LC(N8)                      &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT                 &none
-&none  &tap_or_base 0 LC(Z)              &kp LC(Y)  &kp LC(F)        &kp LC(N1)           &kp LC(N4)                      &kp LA(F3)        &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &tap_or_base 0 LC(MINUS)  &none
-                                                    &macrolay 4 TAB  &numberlay 1 ESCAPE  &spaceshift LEFT_SHIFT SPACE    &kp C_PLAY_PAUSE  &kp C_PREV            &kp C_NEXT
+&none  &kp F8                        &kp F9                   &kp F10                 &kp F11                 &kp F12                         &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp LC(KP_PLUS)           &none
+&none  &layer_hrm LEFT_SHIFT LC(N1)  &layer_hrm LCTRL LC(N2)  &layer_hrm LGUI LC(N4)  &layer_hrm LALT LC(N8)  &none                           &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT                 &none
+&none  &tap_or_base 0 LC(Z)          &kp LC(Y)                &kp LC(F)               &none                   &to 0                           &kp LA(F3)        &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &tap_or_base 0 LC(MINUS)  &none
+                                                              &macrolay 4 TAB         &numberlay 1 ESCAPE     &spaceshift LEFT_SHIFT SPACE    &kp C_PLAY_PAUSE  &kp C_PREV            &kp C_NEXT
             >;
         };
 
