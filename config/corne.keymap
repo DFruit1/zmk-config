@@ -282,10 +282,10 @@
 
         number {
             bindings = <
-&none  &kp F1                       &kp F3                   &kp F5              &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8             &kp N9  &kp PLUS             &none
-&none  &layer_hrm LEFT_SHIFT PRCNT  &layer_hrm LCTRL PERIOD  &layer_hrm LGUI N0  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5             &kp N6  &kp MINUS            &none
-&none  &tap_or_base 0 COLON         &kp F2                   &kp F4              &kp COMMA                  &to 0                           &kp N0         &kp N1              &kp N2             &kp N3  &tap_or_base 0 FSLH  &none
-                                                             &lt 3 TAB           &baselay 5 ESCAPE          &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &baselay 5 PERIOD
+&none  &kp F1                       &kp F3               &kp F5              &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8             &kp N9  &kp PLUS             &none
+&none  &layer_hrm LEFT_SHIFT PRCNT  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5             &kp N6  &kp MINUS            &none
+&none  &tap_or_base 0 COLON         &kp COMMA            &kp PERIOD          &kp N0                     &to 0                           &kp N0         &kp N1              &kp N2             &kp N3  &tap_or_base 0 FSLH  &none
+                                                         &lt 3 TAB           &baselay 5 ESCAPE          &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &baselay 5 PERIOD
             >;
         };
 
