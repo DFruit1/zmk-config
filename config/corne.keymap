@@ -291,17 +291,17 @@
 
         symbol {
             bindings = <
-&none  &kp GRAVE               &kp CARET          &kp DLLR  &kp LEFT_BRACE        &kp RIGHT_BRACE                 &caps_word     &mt RIGHT_ALT LC(LEFT)  &mt RIGHT_GUI LC(DOWN)  &mt RCTRL LC(UP)  &mt RIGHT_SHIFT LC(RIGHT)  &none
-&none  &kp SINGLE_QUOTE        &kp DOUBLE_QUOTES  &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp AT         &kp LEFT                &kp DOWN                &kp UP            &kp RIGHT                  &none
-&none  &ctrl_left LCTRL UNDER  &kp BSLH           &kp PIPE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET               &kp TILDE      &kp HOME                &kp PG_DN               &kp PG_UP         &kp END                    &none
-                                                  &kp HASH  &kp AMPS              &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &none                   &kp DELETE
+&none  &kp GRAVE               &kp CARET          &kp DLLR  &kp LEFT_BRACE        &kp RIGHT_BRACE                 &kp PRCNT      &kp DLLR  &kp LPAR    &kp RPAR   &kp CARET  &none
+&none  &kp SINGLE_QUOTE        &kp DOUBLE_QUOTES  &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp AT         &kp LEFT  &kp DOWN    &kp UP     &kp RIGHT  &none
+&none  &ctrl_left LCTRL UNDER  &kp BSLH           &kp PIPE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET               &kp TILDE      &kp HOME  &kp PG_DN   &kp PG_UP  &kp END    &none
+                                                  &kp HASH  &kp AMPS              &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &none     &kp DELETE
             >;
         };
 
         nav+media {
             bindings = <
 &none  &kp F8                        &kp F9                   &kp F10                 &kp F11                 &kp F12                         &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp LC(KP_PLUS)           &none
-&none  &layer_hrm LEFT_SHIFT LC(N1)  &layer_hrm LCTRL LC(N2)  &layer_hrm LGUI LC(N4)  &layer_hrm LALT LC(N8)  &none                           &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT                 &none
+&none  &layer_hrm LEFT_SHIFT LC(N1)  &layer_hrm LCTRL LC(N2)  &layer_hrm LGUI LC(N4)  &layer_hrm LALT LC(N8)  &caps_word                      &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT                 &none
 &none  &tap_or_base 0 LC(Z)          &kp LC(Y)                &kp LC(F)               &kp LC(A)               &to 0                           &kp LA(F3)        &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &tap_or_base 0 LC(MINUS)  &none
                                                               &macrolay 4 TAB         &numberlay 1 ESCAPE     &spaceshift LEFT_SHIFT SPACE    &kp C_PLAY_PAUSE  &kp C_PREV            &kp C_NEXT
             >;
