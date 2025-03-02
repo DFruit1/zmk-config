@@ -339,10 +339,10 @@
 
         macros {
             bindings = <
-&none  &DisconnectBT  &hopeurwell  &kindregards  &none        &none              &none  &none  &none  &none  &none  &none
-&none  &none          &none        &none         &none        &none              &none  &none  &none  &none  &none  &none
-&none  &BT0           &BT1         &BT2          &BT3         &BT4               &none  &none  &none  &none  &none  &none
-                                   &kp CAPSLOCK  &key_repeat  &caps_word_hold    &none  &none  &none
+&none  &DisconnectBT  &hopeurwell  &kindregards  &none             &none                           &none            &kp KP_NUMBER_7      &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none      &none
+&none  &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT         &none                           &none            &kp KP_NUMBER_4      &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RIGHT  &none
+&none  &kp LC(Z)      &kp LC(X)    &kp PERIOD    &kp N0            &BT4                            &kp KP_NUMBER_0  &kp KP_NUMBER_1      &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none      &none
+                                   &lt 3 ESCAPE  &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE    &symbollay 2 RETURN  &kp DELETE
             >;
         };
 
