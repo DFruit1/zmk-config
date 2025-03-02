@@ -237,6 +237,18 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
         };
+
+        gui_left: gui_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GUI_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+            hold-trigger-on-release;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -305,17 +317,17 @@
             bindings = <
 &none  &kp Q               &kp W                   &kp F         &kp P             &kp G                           &kp J          &kp L             &kp U                  &kp Y                   &tap_or_num 1 SEMICOLON  &none
 &none  &kp A               &kp R                   &kp S         &kp T             &kp D                           &kp H          &kp N             &kp E                  &kp I                   &kp O                    &none
-&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &tap_or_nav 3 SLASH      &none
+&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &tap_or_nav 4 SLASH      &none
                                                    &lt 3 ESCAPE  &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &kp DELETE
             >;
         };
 
         number {
             bindings = <
-&none  &kp F1                       &kp F3               &kp F5              &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8             &kp N9  &kp PLUS             &none
-&none  &layer_hrm LEFT_SHIFT PRCNT  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5             &kp N6  &kp MINUS            &none
-&none  &tap_or_base 0 COLON         &kp COMMA            &kp PERIOD          &kp N0                     &to 0                           &kp N0         &kp N1              &kp N2             &kp N3  &tap_or_base 0 FSLH  &none
-                                                         &lt 3 ESCAPE        &baselay 5 TAB             &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &baselay 5 PERIOD
+&none  &kp F1                       &kp F3               &kp F5              &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8                 &kp N9  &kp PLUS             &none
+&none  &layer_hrm LEFT_SHIFT PRCNT  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5                 &kp N6  &kp MINUS            &none
+&none  &kp COLON                    &kp COMMA            &kp PERIOD          &kp N0                     &to 0                           &kp N0         &kp N1              &kp N2                 &kp N3  &tap_or_nav 4 SLASH  &none
+                                                         &lt 3 ESCAPE        &baselay 5 TAB             &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &tap_or_base 0 PERIOD
             >;
         };
 
@@ -339,10 +351,10 @@
 
         macros {
             bindings = <
-&none  &DisconnectBT  &hopeurwell  &kindregards  &none             &none                           &none            &kp KP_NUMBER_7      &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none      &none
-&none  &kp LEFT       &kp DOWN     &kp UP        &kp RIGHT         &none                           &none            &kp KP_NUMBER_4      &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp RIGHT  &none
-&none  &kp LC(Z)      &kp LC(X)    &kp PERIOD    &kp N0            &BT4                            &kp KP_NUMBER_0  &kp KP_NUMBER_1      &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none      &none
-                                   &lt 3 ESCAPE  &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE    &symbollay 2 RETURN  &kp DELETE
+&none  &kp LS(LC(LEFT))        &kp LC(MINUS)              &kp LC(KP_PLUS)            &kp LS(LC(KP_PLUS))      &kp LC(W)                       &caps_word     &four_left           &four_down             &four_up         &four_right          &none
+&none  &kp LEFT                &kp DOWN                   &kp UP                     &kp RIGHT                &kp LC(L)                       &to 0          &kp LEFT             &kp DOWN               &kp UP           &kp RIGHT            &none
+&none  &ctrl_left LCTRL LC(Z)  &ctrl_left LEFT_GUI LC(X)  &ctrl_left LEFT_ALT LC(C)  &ctrl_left LSHIFT LC(V)  &kp LC(A)                       &kp LC(K)      &kp LC(N)            &kp KP_NUMBER_2        &kp KP_NUMBER_3  &tap_or_nav 4 SLASH  &none
+                                                          &lt 3 ESCAPE               &numberlay 1 TAB         &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RETURN  &tap_or_base 0 PERIOD
             >;
         };
 
