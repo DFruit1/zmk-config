@@ -302,6 +302,17 @@
             bindings = <&kp UP &kp UP &kp UP &kp UP>;
             label = "FOUR_UP";
         };
+
+        alt_tab: alt_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kt LEFT_ALT>,
+                <&macro_wait_time 10>,
+                <&kp TAB &kt LEFT_ALT>;
+
+            label = "ALT_TAB";
+        };
     };
 
     keymap {
@@ -324,10 +335,10 @@
 
         number {
             bindings = <
-&none  &kp F1                       &kp F3               &kp F5              &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8                 &kp N9  &kp PLUS             &none
-&none  &layer_hrm LEFT_SHIFT PRCNT  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5                 &kp N6  &kp MINUS            &none
-&none  &kp COLON                    &kp COMMA            &kp PERIOD          &kp N0                     &to 0                           &kp N0         &kp N1              &kp N2                 &kp N3  &tap_or_nav 4 SLASH  &none
-                                                         &lt 3 ESCAPE        &baselay 5 TAB             &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &tap_or_base 0 PERIOD
+&none  &kp F1                       &kp F3               &kp F5              &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8      &kp N9  &kp PLUS             &none
+&none  &layer_hrm LEFT_SHIFT PRCNT  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5      &kp N6  &kp MINUS            &none
+&none  &lt 4 COLON                  &kp SPACE            &kp PERIOD          &kp N0                     &to 0                           &kp N0         &kp N1              &kp N2      &kp N3  &tap_or_nav 4 SLASH  &none
+                                                         &lt 3 ESCAPE        &baselay 5 TAB             &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &kp PERIOD
             >;
         };
 
@@ -351,9 +362,9 @@
 
         macros {
             bindings = <
-&none  &kp LS(LC(LEFT))        &kp LC(MINUS)              &kp LC(KP_PLUS)            &kp LS(LC(KP_PLUS))      &kp LC(W)                       &caps_word     &four_left           &four_down             &four_up         &four_right          &none
-&none  &kp LEFT                &kp DOWN                   &kp UP                     &kp RIGHT                &kp LC(L)                       &to 0          &kp LEFT             &kp DOWN               &kp UP           &kp RIGHT            &none
-&none  &ctrl_left LCTRL LC(Z)  &ctrl_left LEFT_GUI LC(X)  &ctrl_left LEFT_ALT LC(C)  &ctrl_left LSHIFT LC(V)  &kp LC(A)                       &kp LC(K)      &kp LC(N)            &kp KP_NUMBER_2        &kp KP_NUMBER_3  &tap_or_nav 4 SLASH  &none
+&none  &kp LS(LC(LEFT))        &kp LC(MINUS)              &kp LC(KP_PLUS)            &kp LS(LC(KP_PLUS))      &none                           &none          &four_left           &four_down             &four_up  &four_right  &none
+&none  &kp LEFT                &kp DOWN                   &kp UP                     &kp RIGHT                &kp LC(L)                       &to 0          &kp LEFT             &kp DOWN               &kp UP    &kp RIGHT    &none
+&none  &ctrl_left LCTRL LC(Z)  &ctrl_left LEFT_GUI LC(X)  &ctrl_left LEFT_ALT LC(C)  &ctrl_left LSHIFT LC(V)  &to 0                           &kp LC(K)      &kp LC(N)            &none                  &none     &to 1        &none
                                                           &lt 3 ESCAPE               &numberlay 1 TAB         &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RETURN  &tap_or_base 0 PERIOD
             >;
         };
