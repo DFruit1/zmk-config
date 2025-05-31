@@ -307,9 +307,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kt LEFT_ALT>,
-                <&macro_wait_time 10>,
-                <&kp TAB &kt LEFT_ALT>;
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
 
             label = "ALT_TAB";
         };
@@ -328,26 +331,26 @@
             bindings = <
 &none  &kp Q               &kp W                   &kp F         &kp P             &kp G                           &kp J          &kp L             &kp U                  &kp Y                   &tap_or_num 1 SEMICOLON  &none
 &none  &kp A               &kp R                   &kp S         &kp T             &kp D                           &kp H          &kp N             &kp E                  &kp I                   &kp O                    &none
-&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &tap_or_nav 4 SLASH      &none
+&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &caps_word_hold 0 SLASH  &none
                                                    &lt 3 ESCAPE  &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &kp DELETE
             >;
         };
 
         number {
             bindings = <
-&none  &kp F1                       &kp F3               &kp F5              &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8      &kp N9  &kp PLUS             &none
-&none  &layer_hrm LEFT_SHIFT PRCNT  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5      &kp N6  &kp MINUS            &none
-&none  &lt 4 COLON                  &kp SPACE            &kp PERIOD          &kp N0                     &to 0                           &kp N0         &kp N1              &kp N2      &kp N3  &tap_or_nav 4 SLASH  &none
+&none  &kp F1                       &kp F3               &kp F5              &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8      &kp N9  &tap_or_base 0 PLUS  &none
+&none  &layer_hrm LEFT_SHIFT TILDE  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5      &kp N6  &kp MINUS            &none
+&none  &kp COLON                    &kp SPACE            &kp PERIOD          &kp N0                     &kp PERCENT                     &kp N0         &kp N1              &kp N2      &kp N3  &kp SLASH            &none
                                                          &lt 3 ESCAPE        &baselay 5 TAB             &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &kp PERIOD
             >;
         };
 
         symbol {
             bindings = <
-&none  &kp GRAVE               &kp CARET          &kp DLLR  &kp LEFT_BRACE        &kp RIGHT_BRACE                 &kp PRCNT      &four_left  &four_down  &four_up   &four_right  &none
-&none  &kp SINGLE_QUOTE        &kp DOUBLE_QUOTES  &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp AT         &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT    &none
-&none  &ctrl_left LCTRL UNDER  &kp BSLH           &kp PIPE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET               &kp TILDE      &kp HOME    &kp PG_DN   &kp PG_UP  &kp END      &none
-                                                  &kp HASH  &kp AMPS              &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &none       &kp DELETE
+&none  &kp GRAVE               &kp CARET          &kp DLLR  &kp LEFT_BRACE        &kp RIGHT_BRACE                 &kp LC(LS(KP_PLUS))  &four_left  &four_down  &four_up   &four_right  &none
+&none  &kp SINGLE_QUOTE        &kp DOUBLE_QUOTES  &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp AT               &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT    &none
+&none  &ctrl_left LCTRL UNDER  &kp BSLH           &kp PIPE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET               &alt_tab             &kp HOME    &kp PG_DN   &kp PG_UP  &kp END      &none
+                                                  &kp HASH  &kp AMPS              &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE        &none       &kp DELETE
             >;
         };
 
@@ -373,7 +376,7 @@
             bindings = <
 &none  &kp Q               &kp W                   &kp F         &kp P             &kp G                           &kp J          &kp L             &kp U                  &kp Y                   &tap_or_num 1 SEMICOLON  &none
 &none  &kp A               &kp R                   &kp S         &kp T             &kp D                           &kp H          &kp N             &kp E                  &kp I                   &kp O                    &none
-&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &tap_or_nav 3 SLASH      &none
+&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &caps_word_hold 0 SLASH  &none
                                                    &lt 3 ESCAPE  &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &kp DELETE
             >;
         };
