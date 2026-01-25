@@ -329,37 +329,37 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q               &kp W                   &kp F         &kp P             &kp G                           &kp J          &kp L             &kp U                  &kp Y                   &tap_or_num 1 SEMICOLON  &none
-&none  &kp A               &kp R                   &kp S         &kp T             &kp D                           &kp H          &kp N             &kp E                  &kp I                   &kp O                    &none
-&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &caps_word_hold 0 SLASH  &none
-                                                   &lt 3 ESCAPE  &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &kp DELETE
+&none  &kp Q               &kp W             &kp F         &kp P             &kp G                           &kp J          &kp L             &kp U                  &kp Y                   &tap_or_num 1 SEMICOLON  &none
+&none  &kp A               &kp R             &kp S         &kp T             &kp D                           &kp H          &kp N             &kp E                  &kp I                   &kp O                    &none
+&none  &ctrl_left LCTRL Z  &gui_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &caps_word_hold 0 SLASH  &none
+                                             &lt 3 ESCAPE  &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &kp DELETE
             >;
         };
 
         number {
             bindings = <
-&none  &kp F1                       &kp F3               &kp F5              &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8      &kp N9  &tap_or_base 0 PLUS  &none
-&none  &layer_hrm LEFT_SHIFT TILDE  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5      &kp N6  &kp MINUS            &none
-&none  &kp COLON                    &kp SPACE            &kp PERIOD          &kp N0                     &kp PERCENT                     &kp N0         &kp N1              &kp N2      &kp N3  &kp SLASH            &none
-                                                         &lt 3 ESCAPE        &baselay 5 TAB             &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &kp PERIOD
+&none  &kp F1                       &kp F3               &kp F5              &kp F6                       &kp F7                          &kp ASTERISK   &kp N7              &kp N8      &kp N9  &tap_or_base 0 PLUS  &none
+&none  &layer_hrm LEFT_SHIFT TILDE  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LC(LS(TAB))  &kp LC(TAB)                     &kp EQUAL      &kp N4              &kp N5      &kp N6  &kp MINUS            &none
+&none  &kp COLON                    &kp SPACE            &kp PERIOD          &kp N0                       &kp PERCENT                     &kp N0         &kp N1              &kp N2      &kp N3  &kp SLASH            &none
+                                                         &lt 3 ESCAPE        &baselay 5 TAB               &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &kp PERIOD
             >;
         };
 
         symbol {
             bindings = <
-&none  &kp GRAVE               &kp CARET          &kp DLLR  &kp LEFT_BRACE        &kp RIGHT_BRACE                 &kp LC(LS(KP_PLUS))  &four_left  &four_down  &four_up   &four_right  &none
-&none  &kp SINGLE_QUOTE        &kp DOUBLE_QUOTES  &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp AT               &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT    &none
-&none  &ctrl_left LCTRL UNDER  &kp BSLH           &kp PIPE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET               &alt_tab             &kp HOME    &kp PG_DN   &kp PG_UP  &kp END      &none
-                                                  &kp HASH  &kp AMPS              &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE        &none       &kp DELETE
+&none  &kp GRAVE               &kp CARET                &kp DLLR  &kp LEFT_BRACE        &kp RIGHT_BRACE                 &kp LC(LS(KP_PLUS))  &four_left  &four_down  &four_up   &four_right  &none
+&none  &kp SINGLE_QUOTE        &kp DOUBLE_QUOTES        &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp AT               &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT    &none
+&none  &ctrl_left LCTRL UNDER  &gui_left LEFT_GUI BSLH  &kp PIPE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET               &alt_tab             &kp HOME    &kp PG_DN   &kp PG_UP  &kp END      &none
+                                                        &kp HASH  &kp AMPS              &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE        &none       &kp DELETE
             >;
         };
 
         nav+media {
             bindings = <
-&none  &kp F8                        &kp F9                   &kp F10                 &kp F11                 &kp F12                         &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp LC(KP_PLUS)           &none
-&none  &layer_hrm LEFT_SHIFT LC(N1)  &layer_hrm LCTRL LC(N2)  &layer_hrm LGUI LC(N4)  &layer_hrm LALT LC(N8)  &caps_word                      &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT                 &none
-&none  &tap_or_base 0 LC(Z)          &kp LC(Y)                &kp LC(F)               &kp LC(A)               &to 0                           &kp LA(F3)        &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &tap_or_base 0 LC(MINUS)  &none
-                                                              &macrolay 4 ESCAPE      &numberlay 1 TAB        &spaceshift LEFT_SHIFT SPACE    &kp C_PLAY_PAUSE  &kp C_PREV            &kp C_NEXT
+&none  &kp F8                              &kp F9                     &kp F10                    &kp F11                        &kp F12                         &kp C_AC_HOME     &kp C_MUTE            &kp C_VOLUME_DOWN   &kp C_VOLUME_UP  &kp LC(KP_PLUS)           &none
+&none  &layer_hrm LEFT_SHIFT LS(LG(LEFT))  &layer_hrm LCTRL LG(LEFT)  &layer_hrm LGUI LG(RIGHT)  &layer_hrm LALT LG(LS(RIGHT))  &kp CAPSLOCK                    &kp PRINTSCREEN   &kp LEFT              &kp DOWN            &kp UP           &kp RIGHT                 &none
+&none  &tap_or_base 0 LC(Z)                &kp LC(Y)                  &kp LC(F)                  &kp LC(A)                      &kp LC(LA(DELETE))              &kp LG(D)         &kp LS(C_PLAY_PAUSE)  &kp LS(C_PREVIOUS)  &kp LS(C_NEXT)   &tap_or_base 0 LC(MINUS)  &none
+                                                                      &kp ESCAPE                 &numberlay 1 TAB               &spaceshift LEFT_SHIFT SPACE    &kp C_PLAY_PAUSE  &kp C_PREV            &kp C_NEXT
             >;
         };
 
@@ -374,10 +374,10 @@
 
         alphacopy {
             bindings = <
-&none  &kp Q               &kp W                   &kp F         &kp P             &kp G                           &kp J          &kp L             &kp U                  &kp Y                   &tap_or_num 1 SEMICOLON  &none
-&none  &kp A               &kp R                   &kp S         &kp T             &kp D                           &kp H          &kp N             &kp E                  &kp I                   &kp O                    &none
-&none  &ctrl_left LCTRL Z  &hrmods_on_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &caps_word_hold 0 SLASH  &none
-                                                   &lt 3 ESCAPE  &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &kp DELETE
+&none  &kp Q               &kp W             &kp F         &kp P             &kp G                           &kp J          &kp L             &kp U                  &kp Y                   &tap_or_num 1 SEMICOLON  &none
+&none  &kp A               &kp R             &kp S         &kp T             &kp D                           &kp H          &kp N             &kp E                  &kp I                   &kp O                    &none
+&none  &ctrl_left LCTRL Z  &gui_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &caps_word_hold 0 SLASH  &none
+                                             &lt 3 ESCAPE  &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &kp DELETE
             >;
         };
     };
