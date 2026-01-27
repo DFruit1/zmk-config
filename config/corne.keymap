@@ -104,7 +104,7 @@
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             hold-while-undecided;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 40 41 39>;
         };
@@ -126,10 +126,10 @@
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             hold-trigger-key-positions = <1 2 3 4 5 6 7 8 9 10 14 15 16 17 18 19 20 21 22 25 26 27 28 29 30 31 32 33 34 36 37 38 39 40 41 13>;
             hold-while-undecided;
-            hold-trigger-on-release;
+            require-prior-idle-ms = <400>;
         };
 
         macrolay: macrolay {
@@ -161,7 +161,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <180>;
-            require-prior-idle-ms = <600>;
+            require-prior-idle-ms = <500>;
         };
 
         gui_right: gui_right {
@@ -172,7 +172,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <180>;
-            require-prior-idle-ms = <600>;
+            require-prior-idle-ms = <500>;
         };
 
         tap_or_base: tap_or_base {
@@ -235,7 +235,9 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
+            hold-trigger-on-release;
+            require-prior-idle-ms = <500>;
         };
 
         gui_left: gui_left {
@@ -244,10 +246,22 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            flavor = "balanced";
+            tapping-term-ms = <180>;
             hold-while-undecided;
-            hold-trigger-on-release;
+            require-prior-idle-ms = <500>;
+        };
+
+        ctrl_right: ctrl_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CTRL_RIGHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <180>;
+            hold-trigger-key-positions = <1 2 3 4 5 6 7 8 9 10 14 15 16 17 18 19 20 21 22 25 26 27 28 29 30 31 32 33 34 36 37 38 39 40 41 13>;
+            hold-while-undecided;
         };
     };
 
@@ -329,19 +343,19 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q               &kp W             &kp F         &kp P             &kp G                           &kp J          &kp L             &kp U                  &kp Y                   &tap_or_num 1 SEMICOLON  &none
-&none  &kp A               &kp R             &kp S         &kp T             &kp D                           &kp H          &kp N             &kp E                  &kp I                   &kp O                    &none
-&none  &ctrl_left LCTRL Z  &gui_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &caps_word_hold 0 SLASH  &none
-                                             &lt 3 ESCAPE  &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &kp DELETE
+&none  &caps_word_hold 0 Q  &kp W             &kp F         &kp P             &kp G                           &kp J          &kp L             &kp U                  &kp Y                   &tap_or_num 1 SEMICOLON          &none
+&none  &kp A                &kp R             &kp S         &kp T             &kp D                           &kp H          &kp N             &kp E                  &kp I                   &kp O                            &none
+&none  &ctrl_left LCTRL Z   &gui_left LGUI X  &kp C         &kp V             &kp B                           &kp K          &kp M             &alt_right RALT COMMA  &gui_right RGUI PERIOD  &ctrl_right RIGHT_CONTROL SLASH  &none
+                                              &lt 3 ESCAPE  &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RET  &kp DELETE
             >;
         };
 
         number {
             bindings = <
-&none  &kp F1                       &kp F3               &kp F5              &kp F6                       &kp F7                          &kp ASTERISK   &kp N7              &kp N8      &kp N9  &tap_or_base 0 PLUS  &none
-&none  &layer_hrm LEFT_SHIFT TILDE  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LC(LS(TAB))  &kp LC(TAB)                     &kp EQUAL      &kp N4              &kp N5      &kp N6  &kp MINUS            &none
-&none  &kp COLON                    &kp SPACE            &kp PERIOD          &kp N0                       &kp PERCENT                     &kp N0         &kp N1              &kp N2      &kp N3  &kp SLASH            &none
-                                                         &lt 3 ESCAPE        &baselay 5 TAB               &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &kp PERIOD
+&none  &kp F1                       &kp F3               &kp F5              &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8      &kp N9  &tap_or_base 0 PLUS  &none
+&none  &layer_hrm LEFT_SHIFT TILDE  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5      &kp N6  &kp MINUS            &none
+&none  &kp COLON                    &kp SPACE            &kp PERIOD          &kp N0                     &kp PERCENT                     &kp N0         &kp N1              &kp N2      &kp N3  &kp SLASH            &none
+                                                         &lt 3 ESCAPE        &baselay 5 TAB             &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &kp PERIOD
             >;
         };
 
