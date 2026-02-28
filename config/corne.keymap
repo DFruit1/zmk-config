@@ -116,7 +116,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <180>;
-            hold-trigger-key-positions = <1 2 3 4 5 6 7 8 9 10 14 15 16 17 18 19 20 21 22 25 26 27 28 29 30 31 32 33 34 36 37 38 39 40 41>;
+            hold-trigger-key-positions = <1 2 3 4 5 6 7 8 9 10 14 15 16 17 18 19 20 21 22 25 26 27 28 29 30 31 32 33 34 36 37 38 39 40 41 13>;
             require-prior-idle-ms = <250>;
         };
 
@@ -293,7 +293,7 @@
 
         number {
             bindings = <
-&none  &kp F1                       &kp F3               &kp F5              &kp F6                     &kp F7                          &kp ASTERISK   &kp N7              &kp N8      &kp N9  &tap_or_base 0 PLUS  &none
+&none  &kp LC(W)                    &kp LC(LS(TAB))      &kp LC(TAB)         &kp LC(L)                  &none                           &kp ASTERISK   &kp N7              &kp N8      &kp N9  &tap_or_base 0 PLUS  &none
 &none  &layer_hrm LEFT_SHIFT TILDE  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5      &kp N6  &kp MINUS            &none
 &none  &kp COLON                    &kp SPACE            &kp PERIOD          &kp N0                     &kp PERCENT                     &kp N0         &kp N1              &kp N2      &kp N3  &kp SLASH            &none
                                                          &lt 3 ESCAPE        &baselay 5 TAB             &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &kp PERIOD
@@ -302,10 +302,10 @@
 
         symbol {
             bindings = <
-&none  &kp GRAVE               &kp CARET                &kp DLLR  &kp LEFT_BRACE        &kp RIGHT_BRACE                 &kp LC(LS(KP_PLUS))  &four_left  &four_down  &four_up   &four_right  &none
-&none  &kp SINGLE_QUOTE        &kp DOUBLE_QUOTES        &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp AT               &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT    &none
-&none  &ctrl_left LCTRL UNDER  &gui_left LEFT_GUI BSLH  &kp PIPE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET               &alt_tab             &kp HOME    &kp PG_DN   &kp PG_UP  &kp END      &none
-                                                        &kp HASH  &kp AMPS              &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE        &none       &kp DELETE
+&none  &kp GRAVE               &kp CARET                &kp DLLR  &kp LEFT_BRACE        &kp RIGHT_BRACE                 &none          &four_left  &four_down  &four_up   &four_right  &none
+&none  &kp SINGLE_QUOTE        &kp DOUBLE_QUOTES        &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp AT         &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT    &none
+&none  &ctrl_left LCTRL UNDER  &gui_left LEFT_GUI BSLH  &kp PIPE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET               &alt_tab       &kp HOME    &kp PG_DN   &kp PG_UP  &kp END      &none
+                                                        &kp HASH  &kp AMPS              &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &none       &kp DELETE
             >;
         };
 
