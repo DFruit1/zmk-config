@@ -293,7 +293,7 @@
 
         number {
             bindings = <
-&none  &kp LC(W)                    &kp LC(LS(TAB))      &kp LC(TAB)         &kp LC(L)                  &none                           &kp ASTERISK   &kp N7              &kp N8      &kp N9  &tap_or_base 0 PLUS  &none
+&none  &kp LC(W)                    &kp LC(LS(TAB))      &kp LC(TAB)         &kp LC(L)                  &kp LC(N)                       &kp ASTERISK   &kp N7              &kp N8      &kp N9  &tap_or_base 0 PLUS  &none
 &none  &layer_hrm LEFT_SHIFT TILDE  &layer_hrm LCTRL F2  &layer_hrm LGUI F4  &layer_hrm LALT LESS_THAN  &kp GREATER_THAN                &kp EQUAL      &kp N4              &kp N5      &kp N6  &kp MINUS            &none
 &none  &kp COLON                    &kp SPACE            &kp PERIOD          &kp N0                     &kp PERCENT                     &kp N0         &kp N1              &kp N2      &kp N3  &kp SLASH            &none
                                                          &lt 3 ESCAPE        &baselay 5 TAB             &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 ENTER  &kp PERIOD
@@ -320,10 +320,10 @@
 
         macros {
             bindings = <
-&none  &kp F1          &kp F2          &kp F3        &kp F4            &kp F5                          &kp F8         &kp F9               &kp F10                &kp F11           &kp F12           &none
-&none  &kp LEFT_SHIFT  &kp LCTRL       &mkp LCLK     &mkp RCLK         &kp F6                          &kp F7         &mmv MOVE_LEFT       &mmv MOVE_DOWN         &mmv MOVE_UP      &mmv MOVE_RIGHT   &none
-&none  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT   &hopeurwell                     &kindregards   &mmv MOVE_X(-500)    &mmv MOVE_Y(-400)      &mmv MOVE_Y(400)  &mmv MOVE_X(500)  &none
-                                       &lt 3 ESC     &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RETURN  &tap_or_base 0 PERIOD
+&none  &kp F1            &kp F2          &kp F3        &kp F4            &kp F5                          &kp F8         &kp F9               &kp F10                &kp F11           &kp F12           &none
+&none  &kp LEFT_SHIFT    &kp LCTRL       &mkp LCLK     &mkp RCLK         &kp F6                          &kp F7         &mmv MOVE_LEFT       &mmv MOVE_DOWN         &mmv MOVE_UP      &mmv MOVE_RIGHT   &none
+&none  &msc MOVE_Y(-20)  &msc SCRL_DOWN  &msc SCRL_UP  &msc MOVE_Y(20)   &mkp MCLK                       &kindregards   &mmv MOVE_X(-100)    &mmv MOVE_Y(-100)      &mmv MOVE_Y(100)  &mmv MOVE_X(100)  &none
+                                         &lt 3 ESC     &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RETURN  &tap_or_base 0 PERIOD
             >;
         };
 
