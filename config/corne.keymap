@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 2400 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 2400
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 40
 
 #include <behaviors.dtsi>
@@ -347,10 +347,10 @@
 
         macros {
             bindings = <
-&none  &kp F1            &kp F2          &kp F3        &kp F4            &kp F5                          &kp F8         &kp F9                         &kp F10                     &kp F11                       &kp F12                        &none
-&none  &kp LEFT_SHIFT    &kp LCTRL       &mkp LCLK     &mkp RCLK         &kp F6                          &kp F7         &mmv MOVE_LEFT                 &mmv MOVE_DOWN              &mmv MOVE_UP                  &mmv MOVE_RIGHT                &none
-&none  &msc MOVE_Y(-20)  &msc SCRL_DOWN  &msc SCRL_UP  &msc MOVE_Y(20)   &mkp MCLK                       &kindregards   &Leftmousegobrrr MOVE_X(-600)  &Leftmousegobrrr MOVE_LEFT  &Rightmousegobrrr MOVE_RIGHT  &Rightmousegobrrr MOVE_X(600)  &none
-                                         &lt 3 ESC     &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RETURN            &tap_or_base 0 PERIOD
+&none  &kp F1           &kp F2          &kp F3        &kp F4            &kp F5                          &kp F8         &kp F9               &kp F10                &kp F11            &kp F12           &none
+&none  &kp LEFT_SHIFT   &kp LCTRL       &mkp LCLK     &mkp RCLK         &kp F6                          &kp F7         &mmv MOVE_LEFT       &mmv MOVE_DOWN         &mmv MOVE_UP       &mmv MOVE_RIGHT   &none
+&none  &msc MOVE_Y(10)  &msc SCRL_DOWN  &msc SCRL_UP  &msc MOVE_Y(-10)  &mkp MCLK                       &kindregards   &mmv MOVE_X(-600)    &mmv MOVE_Y(600)       &mmv MOVE_Y(-600)  &mmv MOVE_X(600)  &none
+                                        &lt 3 ESC     &numberlay 1 TAB  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &symbollay 2 RETURN  &tap_or_base 0 PERIOD
             >;
         };
 
