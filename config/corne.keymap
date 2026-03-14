@@ -326,10 +326,10 @@
 
         symbol {
             bindings = <
-&none  &kp GRAVE               &kp CARET                &kp DLLR  &kp LEFT_BRACE        &kp RIGHT_BRACE                 &none          &four_left  &four_down  &four_up   &four_right  &none
-&none  &kp SINGLE_QUOTE        &kp DOUBLE_QUOTES        &kp EXCL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS           &kp AT         &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT    &none
-&none  &ctrl_left LCTRL UNDER  &gui_left LEFT_GUI BSLH  &kp PIPE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET               &alt_tab       &kp HOME    &kp PG_DN   &kp PG_UP  &kp END      &none
-                                                        &kp HASH  &kp AMPS              &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &none       &kp DELETE
+&none  &kp GRAVE               &kp CARET                &kp DLLR  &kp LEFT_BRACE          &kp RIGHT_BRACE                 &none          &four_left  &four_down  &four_up   &four_right  &none
+&none  &kp SINGLE_QUOTE        &kp DOUBLE_QUOTES        &kp EXCL  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS           &kp AT         &kp LEFT    &kp DOWN    &kp UP     &kp RIGHT    &none
+&none  &ctrl_left LCTRL UNDER  &gui_left LEFT_GUI BSLH  &kp PIPE  &kp LEFT_BRACKET        &kp RIGHT_BRACKET               &alt_tab       &kp HOME    &kp PG_DN   &kp PG_UP  &kp END      &none
+                                                        &kp HASH  &numberlay 1 AMPERSAND  &spaceshift LEFT_SHIFT SPACE    &kp BACKSPACE  &none       &kp DELETE
             >;
         };
 
